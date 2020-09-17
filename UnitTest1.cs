@@ -5,8 +5,27 @@ using NUnit.Framework;
 namespace CalcTestProject1
 {
     [TestFixture]
+
+
     public class UnitTest1
     {
+        [SetUp]
+        public void Calc_Open()
+        {
+            Console.WriteLine("Open console");
+        }
+
+        [TearDown]
+        public void Calc_Result()
+        {
+            Console.WriteLine("Take screenshot and save it");
+        }
+
+        [OneTimeTearDown]
+        public void Calc_Endt()
+        {
+            Console.WriteLine("Close the console");
+        }
         [TestCase(5,7,12)]
         [TestCase(6, 7, 13)]
         [TestCase(5, 2, 7)]

@@ -22,8 +22,13 @@ namespace CalcTests
         }
         public double Divide(double firstNum, double secondNum)
         {
+            if (secondNum==0)
+            {
+                Console.WriteLine("Divide by zero is impossible!");
+            }
             return firstNum / secondNum;
         }
+        
         public double Percent(double firstNum, double secondNum)
         {
             return (firstNum / secondNum)*100;
